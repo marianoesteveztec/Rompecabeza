@@ -1,0 +1,107 @@
+
+
+/*Código armado por La Foca Loca S.A. No modificar*/
+body {
+  font-family: simp;
+  width: 940px;
+  max-height: 940px;
+  margin: 4% auto;
+  min-height: 100%;
+  background-image: url(../images/simpsons.jpg);
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+li {
+  padding: 5px 0;
+  list-style: none;
+}
+
+li::before {
+  content: "• ";
+  color: #eee01f;
+}
+
+.col-40, .col-60 {
+  display: table-cell;
+  margin: 0;
+  vertical-align: top;
+}
+.col-40 {
+  background: #a2e4eb;;
+  padding: 30px;
+  color: #000;
+}
+
+#juego div {
+  text-align: center;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/*Arranco mi Código*/
+
+.col-60 {
+
+  box-sizing: border-box;
+  margin: auto;
+  background-color: grey;
+  width: 60%;
+  height: 60%;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+
+#juego div{
+  box-sizing: border-box;
+  width: 33.3333333333%;
+  height: 33.333333333%;
+  float: left;
+  margin: 0;
+
+}
+
+#juego div img{
+  max-width: 100%;
+  display: block;
+}
+
+#pie{
+  background-color: black;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin: 0;
+}
+
+#pie p {
+  margin: 0px auto;
+  padding: 10px;
+  font-size: 100%;
+
+}
+
+#pie a{
+  text-decoration: none;
+  color: white;
+}
+
+@font-face {
+  font-family: "simp";
+  src: url("../fonts/letra.ttf");
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
