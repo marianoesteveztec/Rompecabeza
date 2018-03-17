@@ -2,8 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>BMO Arcade</title>
+    <title>Simpsons puzzle</title>
     <link rel="stylesheet" href="css/juego.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/sweetalert/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="js/sweetalert/sweetalert.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
 
   </head>
   <body>
@@ -15,30 +19,40 @@
       <div id="instrucciones">
         <h2> Instrucciones </h2>
         <ul>
-          <li>Mover las piezas presionando las teclas de flechas</li>
-          <li>Encontrar el orden correcto de las piezas</li>
-        </ul>
-      </div>
+            <li>Mover las piezas presionando las teclas de flechas</li>
+            <li>Mover las piezas clickeando las piezas contiguas al lugar vacio </li>
+            <li>Encontrar el orden correcto de las piezas</li>
+          </ul>
+        </div>
+
+        <ul id="seleccionar">
+
+           <h3 id="nivel"> Nivel de dificultad: </h3>
+           <label>
+             <input class="opcion-nivel" type="radio" name="level" id="facil" checked> Facil
+           </label> <br>
+           <label>
+             <input class="opcion-nivel" type="radio" name="level" id="intermedio"> Intermedio
+           </label> <br>
+           <label>
+             <input class="opcion-nivel" type="radio" name="level" id="dificil"> Difícil
+           </label><br><br>
+           <h3>Cantidad de piezas por lado:</h3>
+           <h3 id="cantidadPiezasPorLado" style="color: red">  3  </h3 >
+      </ul>
+        <h3> Movimientos Restantes</h3>
+        <h3 id="movimientos" style="color: red"> 40 </h3>
+        <button id="mezclar">Mezclar</button>
     </div>
 
+
     <div class="col-60">
-      <div id="juego">
-        <div id="1"><img src="images/homer1.jpg"> </div>
-        <div id="2"><img src="images/homer2.jpg"> </div>
-        <div id="3"><img src="images/homer3.jpg"> </div>
-        <div id="4"><img src="images/homer4.jpg"> </div>
-        <div id="5"><img src="images/homer5.jpg"> </div>
-        <div id="6"><img src="images/homer6.jpg"> </div>
-        <div id="7"><img src="images/homer7.jpg"> </div>
-        <div id="8"><img src="images/homer8.jpg"> </div>
-        <div id="9"><img src="images/homer9.jpg">  </div>
-     </div>
+      <canvas id="juegoCanvas" width="600" height="600"> </canvas>
     </div>
 
     <div id="pie">
       <p >
          <a href="https://marianoesteveztec.github.io/CV/">Autor: Mariano Estevez, Desarrollador Web Full Stack Jr.</a>
-
       </p>
     </div>
     <script src="js/juego.js"></script>
